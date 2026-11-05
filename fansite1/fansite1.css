@@ -1,0 +1,223 @@
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h2 {
+    font-size: 25px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+
+/* ACCUEIL */
+
+.accueil {
+    height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 50px;
+
+    background-image: url("ego-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.texte {
+    max-width: 600px;
+}
+
+.texte p {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.texte h1 {
+    font-size: 55px;
+    margin-top: 20px;
+}
+
+
+/* PRESENTATION */
+
+.presentation {
+    text-align: center;
+    padding: 70px 20%;
+}
+
+.presentation h2 {
+    margin-bottom: 20px;
+}
+
+.presentation p {
+    line-height: 1.7;
+    color: #ccc;
+}
+
+
+/* RUBRIQUES */
+
+.rubriques {
+    padding: 50px;
+    text-align: center;
+}
+
+.rubriques h2 {
+    margin-bottom: 30px;
+}
+
+/* GRID */
+
+.grille {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.carte {
+    background-color: #222;
+    padding: 40px;
+}
+
+.carte h3 {
+    margin-bottom: 20px;
+}
+
+.carte a {
+    color: white;
+    text-decoration: none;
+}
+
+.carte a:hover {
+    color: #aaa;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 30px 40px;
+
+    background-color: #080808;
+    color: #aaa;
+    
+    font-size: 12px;
+}
+
+.reseaux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-reseau {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-reseau:hover {
+    transform: scale(1.2);
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .accueil {
+        height: 500px;
+    }
+
+    .texte h1 {
+        font-size: 38px;
+    }
+
+    .grille {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}

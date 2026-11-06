@@ -59,6 +59,13 @@ nav a:hover {
     color: #aaa;
 }
 
+nav a[aria-current="page"] {
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+}
+
 
 /* ACCUEIL */
 
@@ -151,6 +158,8 @@ nav a:hover {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
     justify-content: space-around;
     align-items: center;
 
@@ -189,6 +198,141 @@ footer {
 
 
 
+/* NAVIGATION DU FOOTER */
+
+.footer-nav {
+    flex-basis: 100%;          /* le menu prend toute la largeur : il passe sur sa propre ligne */
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: #aaa;
+}
+
+
+/* PAGES SECONDAIRES (actualité, réalisations, photos, contact) */
+
+.contenu {
+    max-width: 1000px;         /* largeur maximale du contenu */
+    margin: 0 auto;            /* centre le contenu */
+    padding: 60px 40px;
+}
+
+.contenu h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contenu h2 {
+    margin: 40px 0 15px;
+}
+
+.contenu h3 {
+    margin-bottom: 10px;
+}
+
+.contenu p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.contenu a {
+    color: white;
+}
+
+.contenu a:hover {
+    color: #aaa;
+}
+
+
+/* ACTUALITÉ : image à gauche, texte à droite */
+
+.actu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.actu img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+}
+
+.actu img {
+    width: 100%;
+    max-width: 450px;
+    max-height: 350px;
+    border-radius: 12px;
+}
+
+
+/* GRILLE DE 3 COLONNES (accueil, réalisations, photos) */
+
+.grille-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grille-3 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;         /* l'image remplit la boîte sans être déformée */
+}
+
+
+/* EMPLACEMENT VIDE : à remplacer par une image */
+
+.emplacement {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px dashed #555;
+    color: #888;
+}
+
+figcaption {
+    margin-top: 8px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+
+/* FORMULAIRE */
+
+form {
+    display: flex;
+    flex-direction: column;    /* les champs sont les uns sous les autres */
+    gap: 10px;
+    max-width: 600px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+.bouton {
+    padding: 14px;
+    background-color: white;
+    color: #111;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bouton:hover {
+    background-color: #aaa;
+}
+
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 900px) {
@@ -218,6 +362,18 @@ footer {
     footer {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .contenu {
+        padding: 40px 20px;
+    }
+
+    .actu {
+        flex-direction: column;
+    }
+
+    .grille-3 {
+        grid-template-columns: 1fr;
     }
 
 }

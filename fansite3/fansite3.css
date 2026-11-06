@@ -1,0 +1,371 @@
+﻿/* base de la page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* haut de page (header) */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+}
+
+/* logo cr7 en haut a gauche */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h2 {
+    font-size: 25px;
+    color: #d4af37;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* menu de navigation */
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* souligne la page ou on se trouve */
+nav a[aria-current="page"] {
+    color: #d4af37;
+    font-weight: bold;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 3px;
+}
+
+
+/* grande image d'accueil */
+
+.accueil {
+    height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 50px;
+
+    background-image: url("cr7-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.texte {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.texte p {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.texte h1 {
+    font-size: 55px;
+    margin-top: 20px;
+    color: #d4af37;
+}
+
+
+/* texte de presentation */
+
+.presentation {
+    text-align: center;
+    padding: 70px 20%;
+}
+
+.presentation h2 {
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.presentation p {
+    line-height: 1.7;
+    color: #ccc;
+}
+
+
+/* bloc pour explorer les pages */
+
+.rubriques {
+    padding: 50px;
+    text-align: center;
+}
+
+.rubriques h2 {
+    margin-bottom: 30px;
+    color: #d4af37;
+}
+
+/* grille 2 colonnes */
+
+.grille {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.carte {
+    background-color: #222;
+    padding: 40px;
+}
+
+.carte h3 {
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.carte a {
+    color: white;
+    text-decoration: none;
+}
+
+.carte a:hover {
+    color: #d4af37;
+}
+
+
+/* bas de page (footer) */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 30px 40px;
+
+    background-color: #080808;
+    color: #aaa;
+    
+    font-size: 12px;
+}
+
+.reseaux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-reseau {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-reseau:hover {
+    transform: scale(1.2);
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* menu dans le footer */
+
+.footer-nav {
+    flex-basis: 100%;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: #aaa;
+}
+
+
+/* style pour les autres pages (actu, realisations, photos, contact) */
+
+.contenu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.contenu h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.contenu h2 {
+    margin: 40px 0 15px;
+    color: #d4af37;
+}
+
+.contenu h3 {
+    margin-bottom: 10px;
+}
+
+.contenu p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.contenu a {
+    color: white;
+}
+
+.contenu a:hover {
+    color: #d4af37;
+}
+
+
+/* page actualite : image a gauche et texte a droite */
+
+.actu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.actu img {
+    width: 100%;
+    max-width: 450px;
+    max-height: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+/* grille de 3 colonnes pour les photos et videos */
+
+.grille-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grille-3 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* evite de deformer les photos */
+}
+
+figcaption {
+    margin-top: 8px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+
+/* formulaire de contact */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+.bouton {
+    padding: 14px;
+    background-color: #d4af37;
+    color: #111;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bouton:hover {
+    background-color: #aaa;
+}
+
+
+/* adaptation pour ecran telephone (responsive) */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .accueil {
+        height: 500px;
+    }
+
+    .texte h1 {
+        font-size: 38px;
+    }
+
+    .grille {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contenu {
+        padding: 40px 20px;
+    }
+
+    .actu {
+        flex-direction: column;
+    }
+
+    .grille-3 {
+        grid-template-columns: 1fr;
+    }
+
+}

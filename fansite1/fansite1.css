@@ -1,5 +1,5 @@
 
-/* GENERAL */
+/* global */
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 
-/* HEADER */
+/* header */
 
 header {
     display: flex;
@@ -24,7 +24,7 @@ header {
     padding: 20px 40px;
 }
 
-/* LOGO */
+/* logo */
 
 .logo {
     display: flex;
@@ -42,7 +42,7 @@ header {
     object-fit: contain;
 }
 
-/* NAVIGATION */
+/* nav */
 
 nav {
     display: flex;
@@ -67,7 +67,7 @@ nav a[aria-current="page"] {
 }
 
 
-/* ACCUEIL */
+/* lobby */
 
 .accueil {
     height: 650px;
@@ -97,7 +97,7 @@ nav a[aria-current="page"] {
 }
 
 
-/* PRESENTATION */
+/* presentation */
 
 .presentation {
     text-align: center;
@@ -114,7 +114,7 @@ nav a[aria-current="page"] {
 }
 
 
-/* RUBRIQUES */
+/* sections */
 
 .rubriques {
     padding: 50px;
@@ -125,7 +125,7 @@ nav a[aria-current="page"] {
     margin-bottom: 30px;
 }
 
-/* GRID */
+/* grid */
 
 .grille {
     display: grid;
@@ -154,7 +154,7 @@ nav a[aria-current="page"] {
 }
 
 
-/* FOOTER */
+/* footer */
 
 footer {
     display: flex;
@@ -210,11 +210,11 @@ footer {
 }
 
 
-/* PAGES SECONDAIRES (actualité, réalisations, photos, contact) */
+/* other pages  */
 
 .contenu {
-    max-width: 1000px;         /* largeur maximale du contenu */
-    margin: 0 auto;            /* centre le contenu */
+    max-width: 1000px;         
+    margin: 0 auto;            
     padding: 60px 40px;
 }
 
@@ -246,7 +246,7 @@ footer {
 }
 
 
-/* ACTUALITÉ : image à gauche, texte à droite */
+/* actualite page */
 
 .actu {
     display: flex;
@@ -268,7 +268,7 @@ footer {
 }
 
 
-/* GRILLE DE 3 COLONNES (accueil, réalisations, photos) */
+/* grid for the pages "accueil, réalisations and photos */
 
 .grille-3 {
     display: grid;
@@ -279,34 +279,17 @@ footer {
 .grille-3 img {
     width: 100%;
     height: 180px;
-    object-fit: cover;         /* l'image remplit la boîte sans être déformée */
+    object-fit: cover;         /* to cover the box without being deformed  */
 }
 
 
-/* EMPLACEMENT VIDE : à remplacer par une image */
-
-.emplacement {
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px dashed #555;
-    color: #888;
-}
-
-figcaption {
-    margin-top: 8px;
-    color: #ccc;
-    font-size: 14px;
-}
 
 
 /* FORMULAIRE */
 
 form {
     display: flex;
-    flex-direction: column;    /* les champs sont les uns sous les autres */
+    flex-direction: column;    
     gap: 10px;
     max-width: 600px;
 }
@@ -333,7 +316,7 @@ textarea {
 }
 
 
-/* RESPONSIVE */
+/* responsiv design */
 
 @media screen and (max-width: 900px) {
 
